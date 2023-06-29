@@ -15,7 +15,7 @@ module.exports = {
             const thought = await Thought.findOne({ _id: req.params.thoughtId })
     
             if (!thought) {
-                return res.status(404).json({ message: 'No thought with that ID' });
+                return res.status(404).json({ message: 'No thought with that id' });
             }
 
             res.status(200).json(thought);
@@ -35,7 +35,7 @@ module.exports = {
             );
 
             if (!user) {
-                return res.status(404).json({ message: 'Thought created, no User with that ID found!' });
+                return res.status(404).json({ message: 'Thought created, no User with that id found!' });
             }
             res.status(200).json({ message: 'Thought created successfully!' });
         } catch (err) {
@@ -112,7 +112,7 @@ module.exports = {
                 { new: true }
             );
             if (!reaction) {
-                return res.status(404).json({ message: "Thought ID is invald; please check thoughtId!" })
+                return res.status(404).json({ message: "Thought id is invalid; please check thoughtId!" })
             }
             res.status(200).json({ message: 'Reaction successfully removed!' });
         } catch (err) {

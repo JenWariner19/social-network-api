@@ -1,6 +1,6 @@
 const { Schema, Types, model } = require('mongoose');
 
-constreactionSchema = new Schema(
+const reactionSchema = new Schema(
     {
         reactionId: {
             type: Types.ObjectId,
